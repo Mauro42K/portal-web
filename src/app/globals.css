@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --text-primary: #111827;
+  --text-secondary: #475569;
+  --focus-ring: #2563eb;
+  --panel-border: rgba(255, 255, 255, 0.65);
+  --panel-shadow:
+    0 42px 108px -36px rgba(15, 23, 42, 0.36),
+    0 22px 42px -28px rgba(15, 23, 42, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+  --card-border: rgba(255, 255, 255, 0.5);
+  --card-shadow:
+    0 18px 34px -20px rgba(15, 23, 42, 0.2),
+    0 10px 18px -16px rgba(15, 23, 42, 0.12);
+  --card-shadow-hover:
+    0 28px 44px -22px rgba(15, 23, 42, 0.24),
+    0 14px 22px -16px rgba(15, 23, 42, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 15% 82%, rgba(251, 146, 60, 0.28), transparent 42%),
+    radial-gradient(circle at 88% 14%, rgba(56, 189, 248, 0.28), transparent 40%),
+    radial-gradient(circle at 64% 28%, rgba(191, 219, 254, 0.4), transparent 38%),
+    linear-gradient(145deg, #f8fafc 0%, #f1f5f9 45%, #eef2ff 100%);
+}
+
+.portal-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
+}
+
+.bg-orb-1,
+.bg-orb-2,
+.bg-orb-3 {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(24px);
+  opacity: 0.8;
+}
+
+.bg-orb-1 {
+  left: 8%;
+  top: 56%;
+  height: 220px;
+  width: 220px;
+  background: radial-gradient(circle at 35% 35%, rgba(253, 186, 116, 0.95), rgba(251, 113, 133, 0.25) 70%, transparent 80%);
+}
+
+.bg-orb-2 {
+  right: 9%;
+  top: 10%;
+  height: 260px;
+  width: 260px;
+  background: radial-gradient(circle at 35% 35%, rgba(125, 211, 252, 0.9), rgba(96, 165, 250, 0.2) 68%, transparent 78%);
+}
+
+.bg-orb-3 {
+  left: 35%;
+  top: 15%;
+  height: 180px;
+  width: 180px;
+  background: radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.9), rgba(196, 181, 253, 0.15) 70%, transparent 82%);
+}
+
+a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--focus-ring) 72%, white);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
