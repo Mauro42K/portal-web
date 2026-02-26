@@ -2,6 +2,11 @@
 
 Launcher estático en Next.js para centralizar apps activas y placeholders futuros.
 
+## Demo
+
+- Producción (Vercel): `https://suite-pro.vercel.app`
+- Repositorio (GitHub): `https://github.com/Mauro42K/portal-web`
+
 ## Stack
 
 - Next.js (App Router)
@@ -24,6 +29,8 @@ pnpm lint
 pnpm build
 pnpm start
 ```
+
+Nota: en Next.js 16, `pnpm lint` puede fallar si el script usa `next lint` (comando legacy).
 
 ## Configuración de apps
 
@@ -54,3 +61,9 @@ Ejemplo local (opcional):
 - `http://localhost:3000/?from=tasko-ai`
 
 Nota: en este MVP no se implementa lógica especial para el parámetro `from`; solo se documenta el patrón para futuras integraciones.
+
+## Deploy
+
+Deploy publicado en Vercel con dominio:
+
+- `https://suite-pro.vercel.app`
