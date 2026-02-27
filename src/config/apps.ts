@@ -27,7 +27,7 @@ export const PORTAL_APPS: PortalApp[] = [
     title: "PDR-Gantt",
     subtitle: "Gestión visual de proyectos",
     description: "Gestión visual de proyectos y cronogramas",
-    href: "https://pdr-gantt-prod-web.onrender.com",
+    href: "https://pdr-gantt.vercel.app",
     status: "active",
     icon: "gantt",
     ariaLabel: "Abrir PDR-Gantt",
