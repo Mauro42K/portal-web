@@ -29,11 +29,6 @@ function ActiveCard({ app }: { app: ActivePortalApp }) {
         <p className="text-sm leading-relaxed text-slate-500/80 sm:text-[0.95rem] lg:text-base">
           {app.description ?? app.subtitle}
         </p>
-        {app.note ? (
-          <p className="text-[0.73rem] font-medium tracking-[0.01em] text-slate-500/70">
-            {app.note}
-          </p>
-        ) : null}
       </div>
 
       <div className="pointer-events-none absolute inset-0 rounded-3xl ring-0 ring-sky-400/35 transition duration-300 ease-out group-hover:ring-1 group-focus-visible:ring-2" />
@@ -60,11 +55,6 @@ function ComingSoonCard({ app }: { app: PortalApp }) {
         <p className="text-sm leading-relaxed text-slate-500/80 sm:text-[0.95rem] lg:text-base">
           {app.description ?? app.subtitle}
         </p>
-        {app.note ? (
-          <p className="text-[0.73rem] font-medium tracking-[0.01em] text-slate-500/70">
-            {app.note}
-          </p>
-        ) : null}
       </div>
     </div>
   );

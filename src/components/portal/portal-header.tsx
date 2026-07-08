@@ -5,8 +5,7 @@ export function PortalHeader() {
     <header className="flex items-start justify-between gap-4">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[2rem]">
-          <span>Bienvenido</span>
-          <span className="text-slate-900/70"> / Welcome</span>
+          Welcome
         </h1>
       </div>
 
