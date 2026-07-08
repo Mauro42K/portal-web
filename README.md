@@ -39,6 +39,11 @@ Las tarjetas se definen en:
 - `src/config/apps.ts`
 
 Para agregar una nueva app, añade un objeto al array `PORTAL_APPS`.
+Apps actuales:
+
+- Tasko.ai
+- PDR-Gantt
+- CAD View
 
 ## Back to Portal (futuro)
 

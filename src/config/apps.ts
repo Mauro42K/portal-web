@@ -1,10 +1,11 @@
-export type PortalAppIcon = "tasko" | "gantt" | "plus";
+export type PortalAppIcon = "tasko" | "gantt" | "cad-view" | "plus";
 
 export type PortalApp = {
   id: string;
   title: string;
   subtitle: string;
   description?: string;
+  note?: string;
   href?: string;
   status: "active" | "coming-soon";
   icon: PortalAppIcon;
@@ -33,10 +34,14 @@ export const PORTAL_APPS: PortalApp[] = [
     ariaLabel: "Abrir PDR-Gantt",
   },
   {
-    id: "coming-soon",
-    title: "Próximamente",
-    subtitle: "Nuevas herramientas en camino",
-    status: "coming-soon",
-    icon: "plus",
+    id: "cad-view",
+    title: "CAD View",
+    subtitle: "View DWG/DXF CAD drawings in the browser",
+    description: "View DWG/DXF CAD drawings in the browser",
+    note: "Recommended: Google Chrome",
+    href: "https://cad-view-pearl.vercel.app",
+    status: "active",
+    icon: "cad-view",
+    ariaLabel: "Abrir CAD View",
   },
 ];

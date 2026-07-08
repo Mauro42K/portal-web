@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { PortalAppIcon } from "@/config/apps";
 
 type IconProps = {
@@ -6,6 +7,20 @@ type IconProps = {
 
 function mergeClasses(...classes: Array<string | undefined>) {
   return classes.filter(Boolean).join(" ");
+}
+
+function CadViewIcon({ className }: IconProps) {
+  return (
+    <Image
+      src="/icons/cad-view-icon-512.png"
+      alt=""
+      aria-hidden="true"
+      width={512}
+      height={512}
+      className={mergeClasses("h-16 w-16 select-none object-contain", className)}
+      priority={false}
+    />
+  );
 }
 
 export function TaskoIcon({ className }: IconProps) {
@@ -137,5 +152,6 @@ export function AppIcon({
 }) {
   if (icon === "tasko") return <TaskoIcon className={className} />;
   if (icon === "gantt") return <GanttIcon className={className} />;
+  if (icon === "cad-view") return <CadViewIcon className={className} />;
   return <PlusIcon className={className} />;
 }
